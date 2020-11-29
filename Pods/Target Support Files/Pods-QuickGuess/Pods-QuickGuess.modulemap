@@ -1,0 +1,6 @@
+framework module Pods_QuickGuess {
+  umbrella header "Pods-QuickGuess-umbrella.h"
+
+  export *
+  module * { export * }
+}

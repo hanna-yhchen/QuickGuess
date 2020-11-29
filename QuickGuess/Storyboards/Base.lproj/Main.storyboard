@@ -1,0 +1,1810 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Start View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="StartViewController" customModule="QuickGuess" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="csZ-mO-9s7">
+                                <rect key="frame" x="52.5" y="138.5" width="270" height="390"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nV8-3l-z9y">
+                                        <rect key="frame" x="62.5" y="0.0" width="145" height="145"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="145" id="Nns-mM-5gN"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="145" id="hCS-g6-7fz"/>
+                                        </constraints>
+                                        <string key="text">數 戰
+速 決</string>
+                                        <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="60"/>
+                                        <color key="textColor" name="bluePalette-1"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="geD-fn-Ige">
+                                        <rect key="frame" x="0.0" y="205" width="270" height="90"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="請選擇遊戲人數：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8bU-Gk-VFe">
+                                                <rect key="frame" x="0.0" y="0.0" width="270" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" name="bluePalette-1"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="tyQ-e1-oZA">
+                                                <rect key="frame" x="61" y="50.5" width="148" height="48"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UWh-Ks-aw0">
+                                                        <rect key="frame" x="0.0" y="0.0" width="24" height="48"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
+                                                        <color key="textColor" name="bluePalette-3"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minimumValue="2" maximumValue="4" translatesAutoresizingMaskIntoConstraints="NO" id="T5L-1s-mfE">
+                                                        <rect key="frame" x="54" y="8" width="94" height="32"/>
+                                                        <connections>
+                                                            <action selector="stepperChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="v1U-Cj-zac"/>
+                                                        </connections>
+                                                    </stepper>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="8bU-Gk-VFe" firstAttribute="leading" secondItem="geD-fn-Ige" secondAttribute="leading" id="9pq-yv-mwO"/>
+                                            <constraint firstItem="tyQ-e1-oZA" firstAttribute="top" secondItem="8bU-Gk-VFe" secondAttribute="bottom" constant="30" id="Hpr-AW-cIh"/>
+                                            <constraint firstAttribute="height" constant="90" id="R5A-dO-NTL"/>
+                                            <constraint firstItem="8bU-Gk-VFe" firstAttribute="top" secondItem="geD-fn-Ige" secondAttribute="top" id="WbI-BS-sj4"/>
+                                            <constraint firstAttribute="trailing" secondItem="8bU-Gk-VFe" secondAttribute="trailing" id="n5G-sI-hji"/>
+                                            <constraint firstItem="8bU-Gk-VFe" firstAttribute="leading" secondItem="geD-fn-Ige" secondAttribute="leading" id="r7Q-eG-zId"/>
+                                            <constraint firstItem="tyQ-e1-oZA" firstAttribute="centerX" secondItem="geD-fn-Ige" secondAttribute="centerX" id="sTh-GH-h8J"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Lp-wF-pqs">
+                                        <rect key="frame" x="85" y="355" width="100" height="35"/>
+                                        <color key="backgroundColor" name="bluePalette-2"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="MQY-hC-lfe"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="fTi-DD-aE9"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="開始遊戲">
+                                            <color key="titleColor" name="ivory"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="startPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YLQ-AE-Hxi"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="geD-fn-Ige" firstAttribute="leading" secondItem="csZ-mO-9s7" secondAttribute="leading" id="0Jv-qG-bht"/>
+                                    <constraint firstAttribute="width" constant="270" id="DLc-aN-fKD"/>
+                                    <constraint firstAttribute="trailing" secondItem="geD-fn-Ige" secondAttribute="trailing" id="Odz-dd-qv2"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="ivory"/>
+                        <constraints>
+                            <constraint firstItem="csZ-mO-9s7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4zy-3o-Hza"/>
+                            <constraint firstItem="csZ-mO-9s7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XCe-IP-KbR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="xGQ-HR-vql"/>
+                    <connections>
+                        <outlet property="numberLabel" destination="UWh-Ks-aw0" id="eeM-00-gob"/>
+                        <outlet property="startButton" destination="0Lp-wF-pqs" id="rM2-hs-J2x"/>
+                        <outlet property="titleLabel" destination="nV8-3l-z9y" id="sFS-NX-wld"/>
+                        <segue destination="8UF-qU-UoI" kind="presentation" identifier="goToGame" id="Nde-YW-7A3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.40000000000001" y="130.88455772113943"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="7sG-tc-gR3">
+            <objects>
+                <viewController modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="8UF-qU-UoI" customClass="GameViewController" customModule="QuickGuess" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zU5-sq-5kh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HYe-U6-xAd">
+                                <rect key="frame" x="20" y="10" width="21" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="tintColor" name="bluePalette-1"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="arrowshape.turn.up.backward" catalog="system" symbolScale="default"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="light"/>
+                                </state>
+                                <connections>
+                                    <action selector="backPressed:" destination="8UF-qU-UoI" eventType="touchUpInside" id="GZj-bF-gGg"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="數戰速決" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nq9-kX-ucj">
+                                <rect key="frame" x="146.5" y="10" width="82" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                <color key="textColor" name="bluePalette-1"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BdM-vR-R1v">
+                                <rect key="frame" x="0.0" y="39" width="375" height="628"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="W7O-ob-tAA">
+                                        <rect key="frame" x="20" y="10" width="335" height="598"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2E0-5X-7cy">
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="250.5"/>
+                                                <subviews>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" directionalLockEnabled="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" indicatorStyle="white" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Y3W-vQ-n4P">
+                                                        <rect key="frame" x="10" y="10" width="315" height="230.5"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </tableView>
+                                                </subviews>
+                                                <color key="backgroundColor" name="bluePalette-0"/>
+                                                <constraints>
+                                                    <constraint firstItem="Y3W-vQ-n4P" firstAttribute="top" secondItem="2E0-5X-7cy" secondAttribute="top" constant="10" id="4WM-UV-IVN"/>
+                                                    <constraint firstItem="Y3W-vQ-n4P" firstAttribute="leading" secondItem="2E0-5X-7cy" secondAttribute="leading" constant="10" id="KnU-A9-TMF"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Y3W-vQ-n4P" secondAttribute="trailing" constant="10" id="MS2-Bt-M6i"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Y3W-vQ-n4P" secondAttribute="bottom" constant="10" id="pdT-Lh-ayh"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidthDivider">
+                                                        <real key="value" value="240"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusDivider">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1aC-Kv-Fja">
+                                                <rect key="frame" x="54" y="260.5" width="227" height="28"/>
+                                                <color key="backgroundColor" name="yellow"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="27" id="Z2p-zo-m1F"/>
+                                                </constraints>
+                                                <segments>
+                                                    <segment title="提問" width="75"/>
+                                                    <segment title="筆記" width="75"/>
+                                                    <segment title="猜測" width="75"/>
+                                                </segments>
+                                                <color key="selectedSegmentTintColor" name="ivory"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="switchSegment:" destination="8UF-qU-UoI" eventType="valueChanged" id="dvf-9v-bua"/>
+                                                </connections>
+                                            </segmentedControl>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jPx-Fs-0MI" userLabel="Operations">
+                                                <rect key="frame" x="0.0" y="297.5" width="335" height="250.5"/>
+                                                <subviews>
+                                                    <containerView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KyM-wU-kCA" userLabel="Question View">
+                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="250.5"/>
+                                                        <connections>
+                                                            <segue destination="wfM-ID-6yD" kind="embed" identifier="questionEmbedded" id="zGV-2K-dBt"/>
+                                                        </connections>
+                                                    </containerView>
+                                                    <containerView hidden="YES" opaque="NO" tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uMs-af-ulF" userLabel="Note View">
+                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="250.5"/>
+                                                        <connections>
+                                                            <segue destination="Nw4-8y-KDc" kind="embed" identifier="noteEmbedded" id="mvA-Yz-BEg"/>
+                                                        </connections>
+                                                    </containerView>
+                                                    <containerView hidden="YES" opaque="NO" tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hAl-NM-pDA" userLabel="Guess View">
+                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="250.5"/>
+                                                        <connections>
+                                                            <segue destination="u85-qF-hqS" kind="embed" identifier="guessEmbedded" id="Rwf-UK-g2S"/>
+                                                        </connections>
+                                                    </containerView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="uMs-af-ulF" secondAttribute="bottom" id="3lR-34-PRA"/>
+                                                    <constraint firstItem="hAl-NM-pDA" firstAttribute="leading" secondItem="jPx-Fs-0MI" secondAttribute="leading" id="5vM-Hw-1ev"/>
+                                                    <constraint firstAttribute="bottom" secondItem="KyM-wU-kCA" secondAttribute="bottom" id="6CD-hA-dAV"/>
+                                                    <constraint firstItem="KyM-wU-kCA" firstAttribute="leading" secondItem="jPx-Fs-0MI" secondAttribute="leading" id="C10-IF-APt"/>
+                                                    <constraint firstItem="KyM-wU-kCA" firstAttribute="top" secondItem="jPx-Fs-0MI" secondAttribute="top" id="FTb-w2-6dO"/>
+                                                    <constraint firstAttribute="trailing" secondItem="KyM-wU-kCA" secondAttribute="trailing" id="H63-Ha-Mqo"/>
+                                                    <constraint firstAttribute="bottom" secondItem="hAl-NM-pDA" secondAttribute="bottom" id="XAX-ld-xai"/>
+                                                    <constraint firstItem="uMs-af-ulF" firstAttribute="top" secondItem="jPx-Fs-0MI" secondAttribute="top" id="aNS-fs-bDE"/>
+                                                    <constraint firstAttribute="trailing" secondItem="uMs-af-ulF" secondAttribute="trailing" id="cg9-EV-54Q"/>
+                                                    <constraint firstAttribute="trailing" secondItem="hAl-NM-pDA" secondAttribute="trailing" id="gmc-SI-cnL"/>
+                                                    <constraint firstItem="hAl-NM-pDA" firstAttribute="top" secondItem="jPx-Fs-0MI" secondAttribute="top" id="mdq-yo-jdV"/>
+                                                    <constraint firstItem="uMs-af-ulF" firstAttribute="leading" secondItem="jPx-Fs-0MI" secondAttribute="leading" id="qoN-i9-87R"/>
+                                                </constraints>
+                                            </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="TKY-9a-jpg">
+                                                <rect key="frame" x="57.5" y="558" width="220" height="40"/>
+                                                <subviews>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q87-UD-h5U">
+                                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                        <color key="backgroundColor" name="ivory"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="40" id="fsU-Ev-ls5"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="36"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="7"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cic-oc-R7c">
+                                                        <rect key="frame" x="45" y="0.0" width="40" height="40"/>
+                                                        <color key="backgroundColor" name="ivory"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="36"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="7"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQg-8R-U26">
+                                                        <rect key="frame" x="90" y="0.0" width="40" height="40"/>
+                                                        <color key="backgroundColor" name="ivory"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="36"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="7"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xK2-b7-ncV">
+                                                        <rect key="frame" x="135" y="0.0" width="40" height="40"/>
+                                                        <color key="backgroundColor" name="ivory"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="36"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="7"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="4" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sWZ-p5-bfh">
+                                                        <rect key="frame" x="180" y="0.0" width="40" height="40"/>
+                                                        <color key="backgroundColor" name="ivory"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="36"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="7"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="aJV-SO-LMd"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="2E0-5X-7cy" secondAttribute="trailing" id="7mC-F4-fjX"/>
+                                            <constraint firstItem="2E0-5X-7cy" firstAttribute="leading" secondItem="W7O-ob-tAA" secondAttribute="leading" id="9rc-SF-AO1"/>
+                                            <constraint firstItem="jPx-Fs-0MI" firstAttribute="width" secondItem="2E0-5X-7cy" secondAttribute="width" id="C16-TL-tXl"/>
+                                            <constraint firstItem="jPx-Fs-0MI" firstAttribute="height" secondItem="2E0-5X-7cy" secondAttribute="height" id="IDk-IN-KFC"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" name="bluePalette-2"/>
+                                <constraints>
+                                    <constraint firstItem="W7O-ob-tAA" firstAttribute="top" secondItem="BdM-vR-R1v" secondAttribute="top" constant="10" id="2qj-qn-u58"/>
+                                    <constraint firstItem="W7O-ob-tAA" firstAttribute="leading" secondItem="BdM-vR-R1v" secondAttribute="leading" constant="20" id="Y5c-KA-jc7"/>
+                                    <constraint firstAttribute="trailing" secondItem="W7O-ob-tAA" secondAttribute="trailing" constant="20" id="kOX-WT-FdH"/>
+                                    <constraint firstAttribute="bottom" secondItem="W7O-ob-tAA" secondAttribute="bottom" constant="20" id="lsF-57-Yfh"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uwK-qE-lx7">
+                                <rect key="frame" x="335" y="10" width="20" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="tintColor" name="bluePalette-1"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="info.circle" catalog="system" symbolScale="default"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="light"/>
+                                </state>
+                                <connections>
+                                    <segue destination="dIP-Ed-54o" kind="presentation" identifier="showInfo" modalPresentationStyle="formSheet" id="oIv-Ax-9oH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="UFo-tO-c5h"/>
+                        <color key="backgroundColor" name="ivory"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="BdM-vR-R1v" secondAttribute="bottom" id="A5R-KJ-S0b"/>
+                            <constraint firstItem="BdM-vR-R1v" firstAttribute="leading" secondItem="zU5-sq-5kh" secondAttribute="leading" id="MBx-J9-WYb"/>
+                            <constraint firstItem="Nq9-kX-ucj" firstAttribute="centerX" secondItem="zU5-sq-5kh" secondAttribute="centerX" id="NZE-J4-ImI"/>
+                            <constraint firstItem="uwK-qE-lx7" firstAttribute="top" secondItem="UFo-tO-c5h" secondAttribute="top" constant="10" id="PYh-91-1RP"/>
+                            <constraint firstItem="HYe-U6-xAd" firstAttribute="leading" secondItem="UFo-tO-c5h" secondAttribute="leading" constant="20" id="RSG-4Q-aS3"/>
+                            <constraint firstItem="Nq9-kX-ucj" firstAttribute="top" secondItem="UFo-tO-c5h" secondAttribute="top" constant="10" id="WOq-lW-uJM"/>
+                            <constraint firstItem="HYe-U6-xAd" firstAttribute="top" secondItem="UFo-tO-c5h" secondAttribute="top" constant="10" id="ZsA-P6-E1p"/>
+                            <constraint firstItem="UFo-tO-c5h" firstAttribute="trailing" secondItem="uwK-qE-lx7" secondAttribute="trailing" constant="20" id="a43-3l-hB0"/>
+                            <constraint firstItem="BdM-vR-R1v" firstAttribute="top" secondItem="Nq9-kX-ucj" secondAttribute="bottom" constant="5" id="l1O-fd-xpC"/>
+                            <constraint firstAttribute="trailing" secondItem="BdM-vR-R1v" secondAttribute="trailing" id="sUB-lb-AxR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="iyF-dV-toO"/>
+                    <connections>
+                        <outlet property="messageTableView" destination="Y3W-vQ-n4P" id="dYL-kz-q8A"/>
+                        <outlet property="operationView" destination="jPx-Fs-0MI" id="Hlb-nU-MSX"/>
+                        <outlet property="segmentedControl" destination="1aC-Kv-Fja" id="lH0-JD-ila"/>
+                        <outletCollection property="playerCardLabels" destination="Q87-UD-h5U" collectionClass="NSMutableArray" id="9l2-Mg-31H"/>
+                        <outletCollection property="playerCardLabels" destination="cic-oc-R7c" collectionClass="NSMutableArray" id="XCk-9f-0eJ"/>
+                        <outletCollection property="playerCardLabels" destination="sQg-8R-U26" collectionClass="NSMutableArray" id="LxC-KE-66p"/>
+                        <outletCollection property="playerCardLabels" destination="xK2-b7-ncV" collectionClass="NSMutableArray" id="ty9-Ge-0GX"/>
+                        <outletCollection property="playerCardLabels" destination="sWZ-p5-bfh" collectionClass="NSMutableArray" id="nCY-Gd-PmU"/>
+                        <outletCollection property="operationViews" destination="KyM-wU-kCA" collectionClass="NSMutableArray" id="EYh-7g-WTO"/>
+                        <outletCollection property="operationViews" destination="uMs-af-ulF" collectionClass="NSMutableArray" id="w67-Vh-qRS"/>
+                        <outletCollection property="operationViews" destination="hAl-NM-pDA" collectionClass="NSMutableArray" id="S17-PS-FCK"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="backToStart" id="hP9-OY-Yk8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Qn-ly-Im5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="877.60000000000002" y="130.88455772113943"/>
+        </scene>
+        <!--Info View Controller-->
+        <scene sceneID="WEf-vS-Yz9">
+            <objects>
+                <viewController id="dIP-Ed-54o" customClass="InfoViewController" customModule="QuickGuess" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vdu-Qe-9cP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d8W-Sm-QCa">
+                                <rect key="frame" x="335" y="20" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="beC-RV-OFO"/>
+                                    <constraint firstAttribute="width" constant="20" id="bfY-gv-9l7"/>
+                                </constraints>
+                                <color key="tintColor" name="ivory"/>
+                                <state key="normal" image="xmark.circle" catalog="system"/>
+                                <connections>
+                                    <action selector="dismissPressed:" destination="dIP-Ed-54o" eventType="touchUpInside" id="54a-f8-Q6k"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" indicatorStyle="white" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e1E-dd-pi9">
+                                <rect key="frame" x="20" y="45" width="335" height="582"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="➤  ">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" metaFont="system" size="18"/>
+                                            <font key="NSOriginalFont" size="14" name="PingFangTC-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.2" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="數戰速決">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="18" name=".PingFangTC-Regular"/>
+                                            <font key="NSOriginalFont" size="14" name="PingFangTC-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.2" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="14" name="PingFangTC-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.2" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="這是一場推理競賽，請利用提問來獲取線索，發揮你的邏輯推理，搶先揭開謎底吧！">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="14" name="PingFangTC-Regular"/>
+                                            <font key="NSOriginalFont" size="14" name="PingFangTC-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.2" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="14" name="PingFangTC-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.2" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="14" name="PingFangTC-Regular"/>
+                                            <font key="NSOriginalFont" size="14" name="PingFangTC-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.2" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="➤">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="18" name="ZapfDingbatsITC"/>
+                                            <font key="NSOriginalFont" size="18" name="ZapfDingbatsITC"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.2" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="  遊戲目標">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="18" name="PingFangTC-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="PingFangTC-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.2" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="14" name="PingFangTC-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.2" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="3~4人">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="14" name="PingFangTC-Regular"/>
+                                            <font key="NSOriginalFont" size="14" name="PingFangTC-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.2" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="遊戲">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="14" name="PingFangTC-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.2" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="：搶先其他玩家猜出謎底。">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="14" name="PingFangTC-Regular"/>
+                                            <font key="NSOriginalFont" size="14" name="PingFangTC-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.2" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="14" name="PingFangTC-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.2" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="2人">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="14" name="PingFangTC-Regular"/>
+                                            <font key="NSOriginalFont" size="14" name="PingFangTC-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.2" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="遊戲">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="14" name="PingFangTC-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.2" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="：猜出對方手上的數字卡片。">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="14" name="PingFangTC-Regular"/>
+                                            <font key="NSOriginalFont" size="14" name="PingFangTC-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.2" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cgo
+</string>
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="14" name="PingFangTC-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.2" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="➤">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="18" name="ZapfDingbatsITC"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.2" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="  遊戲規則">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="18" name="PingFangTC-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.2" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="14" name="PingFangTC-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.2" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">1. 卡片共有20張，分別有紅、藍色的0~4與6~9，以及兩張綠色的5。2人遊戲時，雙方各持5張卡片。3(4)人遊戲時，每人各持5(4)張卡片，謎底亦為5(4)張卡片。
+2. 卡片從左到右依由小到大、紅左藍右的順序排列。
+3. 玩家輪流行動，可進行提問或猜測。
+</string>
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="14" name="PingFangTC-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" headIndent="15" lineHeightMultiple="1.2" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">4. 提問時從場上問題卡擇一進行，除少數共享問題卡要求全部玩家回答外，提問者自己毋須回答。
+5. 任一玩家猜測成功即結束遊戲。</string>
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="14" name="PingFangTC-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" headIndent="17" lineHeightMultiple="1.2" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yJ2-iH-dcm"/>
+                        <color key="backgroundColor" name="bluePalette-0"/>
+                        <constraints>
+                            <constraint firstItem="d8W-Sm-QCa" firstAttribute="top" secondItem="yJ2-iH-dcm" secondAttribute="top" constant="20" id="8qR-vy-1iI"/>
+                            <constraint firstItem="e1E-dd-pi9" firstAttribute="leading" secondItem="yJ2-iH-dcm" secondAttribute="leading" constant="20" id="CH6-bq-TXx"/>
+                            <constraint firstItem="yJ2-iH-dcm" firstAttribute="trailing" secondItem="e1E-dd-pi9" secondAttribute="trailing" constant="20" id="NYQ-3l-J4a"/>
+                            <constraint firstItem="yJ2-iH-dcm" firstAttribute="bottom" secondItem="e1E-dd-pi9" secondAttribute="bottom" constant="20" id="QVr-wN-Gz5"/>
+                            <constraint firstItem="yJ2-iH-dcm" firstAttribute="trailing" secondItem="d8W-Sm-QCa" secondAttribute="trailing" constant="20" id="lSB-xG-Asu"/>
+                            <constraint firstItem="e1E-dd-pi9" firstAttribute="top" secondItem="d8W-Sm-QCa" secondAttribute="bottom" constant="5" id="n6L-Nf-SVt"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xTo-6B-zvo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="952.79999999999995" y="-663.41829085457277"/>
+        </scene>
+        <!--Note View Controller-->
+        <scene sceneID="nfO-DY-aqa">
+            <objects>
+                <viewController id="Nw4-8y-KDc" userLabel="Note View Controller" customClass="NoteViewController" customModule="QuickGuess" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WQm-ie-Ey1">
+                        <rect key="frame" x="0.0" y="0.0" width="335" height="250.5"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8mR-Do-DcD">
+                                <rect key="frame" x="0.0" y="10" width="335" height="240.5"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fZh-Rv-bnF" userLabel="Cards">
+                                        <rect key="frame" x="17.5" y="0.0" width="300" height="55"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="vT4-zX-eJe">
+                                                <rect key="frame" x="5" y="5" width="290" height="45"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4bs-ra-o2R">
+                                                        <rect key="frame" x="0.0" y="0.0" width="290" height="20"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="er8-VF-rrN">
+                                                                <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="20" id="36e-O5-cSN"/>
+                                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="20" id="GJQ-DF-4oS"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                                <state key="normal" title="0">
+                                                                    <color key="titleColor" name="redCard"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="cardSelected:" destination="u85-qF-hqS" eventType="touchUpInside" id="2tn-sD-3NK"/>
+                                                                    <action selector="cardSelected:" destination="Nw4-8y-KDc" eventType="touchUpInside" id="nYn-ai-gbD"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kWi-Tx-x1n">
+                                                                <rect key="frame" x="30" y="0.0" width="20" height="20"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                                <state key="normal" title="1">
+                                                                    <color key="titleColor" name="redCard"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="cardSelected:" destination="Nw4-8y-KDc" eventType="touchUpInside" id="7GY-EV-xEc"/>
+                                                                    <action selector="cardSelected:" destination="u85-qF-hqS" eventType="touchUpInside" id="UP4-BF-U5N"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0h2-9p-3KP">
+                                                                <rect key="frame" x="60" y="0.0" width="20" height="20"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                                <state key="normal" title="2">
+                                                                    <color key="titleColor" name="redCard"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="cardSelected:" destination="u85-qF-hqS" eventType="touchUpInside" id="135-S0-stc"/>
+                                                                    <action selector="cardSelected:" destination="Nw4-8y-KDc" eventType="touchUpInside" id="iR9-eq-7Gj"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qas-nb-1BG">
+                                                                <rect key="frame" x="90" y="0.0" width="20" height="20"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                                <state key="normal" title="3">
+                                                                    <color key="titleColor" name="redCard"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="cardSelected:" destination="Nw4-8y-KDc" eventType="touchUpInside" id="jPe-9Z-ykR"/>
+                                                                    <action selector="cardSelected:" destination="u85-qF-hqS" eventType="touchUpInside" id="wMA-mH-yVd"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="meD-dJ-YB0">
+                                                                <rect key="frame" x="120" y="0.0" width="20" height="20"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                                <state key="normal" title="4">
+                                                                    <color key="titleColor" name="redCard"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="cardSelected:" destination="u85-qF-hqS" eventType="touchUpInside" id="ZPo-1C-pdA"/>
+                                                                    <action selector="cardSelected:" destination="Nw4-8y-KDc" eventType="touchUpInside" id="pw6-TD-rQh"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dIF-jr-A5k">
+                                                                <rect key="frame" x="150" y="0.0" width="20" height="20"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                                <state key="normal" title="5">
+                                                                    <color key="titleColor" name="greenCard"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="cardSelected:" destination="Nw4-8y-KDc" eventType="touchUpInside" id="Sc6-ui-naj"/>
+                                                                    <action selector="cardSelected:" destination="u85-qF-hqS" eventType="touchUpInside" id="fdG-TN-NdX"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TER-HH-xSO">
+                                                                <rect key="frame" x="180" y="0.0" width="20" height="20"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                                <state key="normal" title="6">
+                                                                    <color key="titleColor" name="redCard"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="cardSelected:" destination="u85-qF-hqS" eventType="touchUpInside" id="5Xe-S7-Dma"/>
+                                                                    <action selector="cardSelected:" destination="Nw4-8y-KDc" eventType="touchUpInside" id="QGE-F9-LLK"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H4M-q5-SSy">
+                                                                <rect key="frame" x="210" y="0.0" width="20" height="20"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                                <state key="normal" title="7">
+                                                                    <color key="titleColor" name="redCard"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="cardSelected:" destination="Nw4-8y-KDc" eventType="touchUpInside" id="D0E-Qr-LYt"/>
+                                                                    <action selector="cardSelected:" destination="u85-qF-hqS" eventType="touchUpInside" id="IWZ-NV-8hh"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5HG-eA-FVH">
+                                                                <rect key="frame" x="240" y="0.0" width="20" height="20"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                                <state key="normal" title="8">
+                                                                    <color key="titleColor" name="redCard"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="cardSelected:" destination="Nw4-8y-KDc" eventType="touchUpInside" id="bEg-bj-Oif"/>
+                                                                    <action selector="cardSelected:" destination="u85-qF-hqS" eventType="touchUpInside" id="rYe-F1-tLI"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ing-lf-eyR">
+                                                                <rect key="frame" x="270" y="0.0" width="20" height="20"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                                <state key="normal" title="9">
+                                                                    <color key="titleColor" name="redCard"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="cardSelected:" destination="u85-qF-hqS" eventType="touchUpInside" id="A1k-FS-fKP"/>
+                                                                    <action selector="cardSelected:" destination="Nw4-8y-KDc" eventType="touchUpInside" id="Nyt-1H-OHG"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yXx-Vf-kra">
+                                                        <rect key="frame" x="0.0" y="25" width="290" height="20"/>
+                                                        <subviews>
+                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pO2-LG-1V1">
+                                                                <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="20" id="5i9-6h-ILe"/>
+                                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="20" id="KPV-k1-NPG"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                                <state key="normal" title="0">
+                                                                    <color key="titleColor" name="blueCard"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="cardSelected:" destination="u85-qF-hqS" eventType="touchUpInside" id="r6N-pf-ChX"/>
+                                                                    <action selector="cardSelected:" destination="Nw4-8y-KDc" eventType="touchUpInside" id="re2-fF-T7k"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0lV-Bl-YRT">
+                                                                <rect key="frame" x="30" y="0.0" width="20" height="20"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                                <state key="normal" title="1">
+                                                                    <color key="titleColor" name="blueCard"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="cardSelected:" destination="Nw4-8y-KDc" eventType="touchUpInside" id="2UL-JE-3X4"/>
+                                                                    <action selector="cardSelected:" destination="u85-qF-hqS" eventType="touchUpInside" id="Geq-8L-PRf"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yvA-p2-dei">
+                                                                <rect key="frame" x="60" y="0.0" width="20" height="20"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                                <state key="normal" title="2">
+                                                                    <color key="titleColor" name="blueCard"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="cardSelected:" destination="u85-qF-hqS" eventType="touchUpInside" id="Gti-8f-0bJ"/>
+                                                                    <action selector="cardSelected:" destination="Nw4-8y-KDc" eventType="touchUpInside" id="xuj-IA-Edu"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9pF-YH-AW9">
+                                                                <rect key="frame" x="90" y="0.0" width="20" height="20"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                                <state key="normal" title="3">
+                                                                    <color key="titleColor" name="blueCard"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="cardSelected:" destination="Nw4-8y-KDc" eventType="touchUpInside" id="c6L-rv-NNJ"/>
+                                                                    <action selector="cardSelected:" destination="u85-qF-hqS" eventType="touchUpInside" id="yYu-RW-Rpt"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SrW-bB-e68">
+                                                                <rect key="frame" x="120" y="0.0" width="20" height="20"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                                <state key="normal" title="4">
+                                                                    <color key="titleColor" name="blueCard"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="cardSelected:" destination="u85-qF-hqS" eventType="touchUpInside" id="MtZ-5t-gpc"/>
+                                                                    <action selector="cardSelected:" destination="Nw4-8y-KDc" eventType="touchUpInside" id="X7G-dC-NdO"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXa-Be-J9x">
+                                                                <rect key="frame" x="150" y="0.0" width="20" height="20"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                                <state key="normal" title="5">
+                                                                    <color key="titleColor" name="greenCard"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="cardSelected:" destination="u85-qF-hqS" eventType="touchUpInside" id="L3i-Ha-XzL"/>
+                                                                    <action selector="cardSelected:" destination="Nw4-8y-KDc" eventType="touchUpInside" id="O87-wm-bz4"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="njO-WA-KhT">
+                                                                <rect key="frame" x="180" y="0.0" width="20" height="20"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                                <state key="normal" title="6">
+                                                                    <color key="titleColor" name="blueCard"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="cardSelected:" destination="Nw4-8y-KDc" eventType="touchUpInside" id="Mub-Ig-QOI"/>
+                                                                    <action selector="cardSelected:" destination="u85-qF-hqS" eventType="touchUpInside" id="VQ1-b2-63p"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vmm-yL-q2n">
+                                                                <rect key="frame" x="210" y="0.0" width="20" height="20"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                                <state key="normal" title="7">
+                                                                    <color key="titleColor" name="blueCard"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="cardSelected:" destination="u85-qF-hqS" eventType="touchUpInside" id="Vzp-M0-IRc"/>
+                                                                    <action selector="cardSelected:" destination="Nw4-8y-KDc" eventType="touchUpInside" id="m7G-nf-ZBc"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YKd-7W-QCN">
+                                                                <rect key="frame" x="240" y="0.0" width="20" height="20"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                                <state key="normal" title="8">
+                                                                    <color key="titleColor" name="blueCard"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="cardSelected:" destination="Nw4-8y-KDc" eventType="touchUpInside" id="ILQ-yg-bfq"/>
+                                                                    <action selector="cardSelected:" destination="u85-qF-hqS" eventType="touchUpInside" id="eoT-X4-oqu"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="19" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4M-0h-lFb">
+                                                                <rect key="frame" x="270" y="0.0" width="20" height="20"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                                <state key="normal" title="9">
+                                                                    <color key="titleColor" name="blueCard"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="cardSelected:" destination="u85-qF-hqS" eventType="touchUpInside" id="ikp-nm-lea"/>
+                                                                    <action selector="cardSelected:" destination="Nw4-8y-KDc" eventType="touchUpInside" id="l45-Q6-Hi8"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" name="ivory"/>
+                                        <constraints>
+                                            <constraint firstItem="vT4-zX-eJe" firstAttribute="top" secondItem="fZh-Rv-bnF" secondAttribute="top" constant="5" id="CPt-YB-nTS"/>
+                                            <constraint firstAttribute="bottom" secondItem="vT4-zX-eJe" secondAttribute="bottom" constant="5" id="If2-Wm-uts"/>
+                                            <constraint firstAttribute="height" constant="55" id="Sx4-C6-JAO"/>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="lpI-To-mdg"/>
+                                            <constraint firstItem="vT4-zX-eJe" firstAttribute="leading" secondItem="fZh-Rv-bnF" secondAttribute="leading" constant="5" id="w1t-N9-qkY"/>
+                                            <constraint firstAttribute="trailing" secondItem="vT4-zX-eJe" secondAttribute="trailing" constant="5" id="ziV-Or-JwL"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qxD-Vx-1Cz">
+                                        <rect key="frame" x="0.0" y="65" width="335" height="175.5"/>
+                                        <color key="backgroundColor" name="bluePalette-0"/>
+                                        <color key="textColor" name="ivory"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidthDivider">
+                                                <real key="value" value="170"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusDivider">
+                                                <real key="value" value="17"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="qxD-Vx-1Cz" firstAttribute="leading" secondItem="8mR-Do-DcD" secondAttribute="leading" id="Arg-9g-TVX"/>
+                                    <constraint firstAttribute="trailing" secondItem="qxD-Vx-1Cz" secondAttribute="trailing" id="RwX-EE-Tpm"/>
+                                    <constraint firstAttribute="bottom" secondItem="qxD-Vx-1Cz" secondAttribute="bottom" id="l88-v2-RT3"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eOT-EE-1p9"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8mR-Do-DcD" firstAttribute="top" secondItem="eOT-EE-1p9" secondAttribute="top" constant="10" id="9cC-Ie-GDn"/>
+                            <constraint firstItem="eOT-EE-1p9" firstAttribute="bottom" secondItem="8mR-Do-DcD" secondAttribute="bottom" id="PZS-xC-Zdn"/>
+                            <constraint firstItem="8mR-Do-DcD" firstAttribute="leading" secondItem="eOT-EE-1p9" secondAttribute="leading" id="fgd-pE-c1w"/>
+                            <constraint firstItem="8mR-Do-DcD" firstAttribute="trailing" secondItem="eOT-EE-1p9" secondAttribute="trailing" id="ipM-hh-ZWs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="qxD-Vx-1Cz" id="Kzn-Fa-DRx"/>
+                        <outletCollection property="cards" destination="Qas-nb-1BG" collectionClass="NSMutableArray" id="eF3-ZW-eyk"/>
+                        <outletCollection property="cards" destination="YKd-7W-QCN" collectionClass="NSMutableArray" id="eKi-F5-fv0"/>
+                        <outletCollection property="cards" destination="njO-WA-KhT" collectionClass="NSMutableArray" id="D1s-hH-pd7"/>
+                        <outletCollection property="cards" destination="H4M-q5-SSy" collectionClass="NSMutableArray" id="66S-hy-cYw"/>
+                        <outletCollection property="cards" destination="9pF-YH-AW9" collectionClass="NSMutableArray" id="7Mc-Eu-V0e"/>
+                        <outletCollection property="cards" destination="er8-VF-rrN" collectionClass="NSMutableArray" id="8X3-N2-hHs"/>
+                        <outletCollection property="cards" destination="TER-HH-xSO" collectionClass="NSMutableArray" id="8Om-rv-lIr"/>
+                        <outletCollection property="cards" destination="5HG-eA-FVH" collectionClass="NSMutableArray" id="quF-xb-deO"/>
+                        <outletCollection property="cards" destination="meD-dJ-YB0" collectionClass="NSMutableArray" id="LSJ-Wd-zmW"/>
+                        <outletCollection property="cards" destination="dIF-jr-A5k" collectionClass="NSMutableArray" id="vpx-2W-sRh"/>
+                        <outletCollection property="cards" destination="kWi-Tx-x1n" collectionClass="NSMutableArray" id="mnJ-zj-S5y"/>
+                        <outletCollection property="cards" destination="0lV-Bl-YRT" collectionClass="NSMutableArray" id="SXM-Lv-5oj"/>
+                        <outletCollection property="cards" destination="SrW-bB-e68" collectionClass="NSMutableArray" id="5d0-pQ-TRS"/>
+                        <outletCollection property="cards" destination="Vmm-yL-q2n" collectionClass="NSMutableArray" id="uPB-aQ-0Tc"/>
+                        <outletCollection property="cards" destination="yvA-p2-dei" collectionClass="NSMutableArray" id="NvS-jK-9Yu"/>
+                        <outletCollection property="cards" destination="lXa-Be-J9x" collectionClass="NSMutableArray" id="9I3-LA-zbL"/>
+                        <outletCollection property="cards" destination="pO2-LG-1V1" collectionClass="NSMutableArray" id="8IS-nO-Aac"/>
+                        <outletCollection property="cards" destination="ing-lf-eyR" collectionClass="NSMutableArray" id="QHB-XU-Oo0"/>
+                        <outletCollection property="cards" destination="0h2-9p-3KP" collectionClass="NSMutableArray" id="qFd-9q-K5y"/>
+                        <outletCollection property="cards" destination="A4M-0h-lFb" collectionClass="NSMutableArray" id="dFG-0T-ity"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7nu-7v-703" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1837.5999999999999" y="709.29535232383819"/>
+        </scene>
+        <!--Question View Controller-->
+        <scene sceneID="5Lt-zT-P1z">
+            <objects>
+                <viewController id="wfM-ID-6yD" customClass="QuestionViewController" customModule="QuickGuess" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fPH-c6-P0E">
+                        <rect key="frame" x="0.0" y="0.0" width="335" height="250.5"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="7lZ-oV-oaQ">
+                                <rect key="frame" x="0.0" y="0.0" width="335" height="250.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="o1U-zO-2gF">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="80"/>
+                                        <subviews>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QoC-Zi-sql" userLabel="Question 0">
+                                                <rect key="frame" x="0.0" y="0.0" width="165" height="80"/>
+                                                <subviews>
+                                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yl1-jB-lWC">
+                                                        <rect key="frame" x="0.0" y="0.0" width="165" height="80"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <inset key="titleEdgeInsets" minX="3" minY="3" maxX="3" maxY="3"/>
+                                                        <state key="normal" title="Question 0">
+                                                            <color key="titleColor" name="ivory"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="buttonPressed:" destination="wfM-ID-6yD" eventType="touchUpInside" id="zeF-tv-JbM"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" name="bluePalette-3"/>
+                                                <constraints>
+                                                    <constraint firstItem="Yl1-jB-lWC" firstAttribute="leading" secondItem="QoC-Zi-sql" secondAttribute="leading" id="4zR-1H-66H"/>
+                                                    <constraint firstItem="Yl1-jB-lWC" firstAttribute="top" secondItem="QoC-Zi-sql" secondAttribute="top" id="9yI-eK-5Qw"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Yl1-jB-lWC" secondAttribute="trailing" id="Xsd-cg-yUz"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Yl1-jB-lWC" secondAttribute="bottom" id="nCR-Sg-YAy"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidthDivider">
+                                                        <real key="value" value="80"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusDivider">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view clipsSubviews="YES" tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vr3-Jf-yb8" userLabel="Question 1">
+                                                <rect key="frame" x="170" y="0.0" width="165" height="80"/>
+                                                <subviews>
+                                                    <button opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EGL-j2-xwP">
+                                                        <rect key="frame" x="0.0" y="0.0" width="165" height="80"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <inset key="titleEdgeInsets" minX="3" minY="3" maxX="3" maxY="3"/>
+                                                        <state key="normal" title="Question 1">
+                                                            <color key="titleColor" name="ivory"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="buttonPressed:" destination="wfM-ID-6yD" eventType="touchUpInside" id="dDn-mU-KFb"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" name="bluePalette-3"/>
+                                                <constraints>
+                                                    <constraint firstItem="EGL-j2-xwP" firstAttribute="leading" secondItem="vr3-Jf-yb8" secondAttribute="leading" id="H5t-p3-gs5"/>
+                                                    <constraint firstAttribute="bottom" secondItem="EGL-j2-xwP" secondAttribute="bottom" id="YcM-AO-QQM"/>
+                                                    <constraint firstItem="EGL-j2-xwP" firstAttribute="top" secondItem="vr3-Jf-yb8" secondAttribute="top" id="kOO-m2-JL4"/>
+                                                    <constraint firstAttribute="trailing" secondItem="EGL-j2-xwP" secondAttribute="trailing" id="xTA-5B-UeF"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidthDivider">
+                                                        <real key="value" value="80"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusDivider">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="VoJ-fJ-htW">
+                                        <rect key="frame" x="0.0" y="85" width="335" height="80.5"/>
+                                        <subviews>
+                                            <view clipsSubviews="YES" tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BUL-1I-l0t" userLabel="Question 2">
+                                                <rect key="frame" x="0.0" y="0.0" width="165" height="80.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oZQ-iF-pVb">
+                                                        <rect key="frame" x="0.0" y="0.0" width="165" height="80.5"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <inset key="titleEdgeInsets" minX="3" minY="3" maxX="3" maxY="3"/>
+                                                        <state key="normal" title="Question 2">
+                                                            <color key="titleColor" name="ivory"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="buttonPressed:" destination="wfM-ID-6yD" eventType="touchUpInside" id="F3A-DI-ghp"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" name="bluePalette-3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="oZQ-iF-pVb" secondAttribute="trailing" id="GwZ-YW-O3G"/>
+                                                    <constraint firstAttribute="bottom" secondItem="oZQ-iF-pVb" secondAttribute="bottom" id="HD1-yq-PVX"/>
+                                                    <constraint firstItem="oZQ-iF-pVb" firstAttribute="leading" secondItem="BUL-1I-l0t" secondAttribute="leading" id="grH-2p-OwW"/>
+                                                    <constraint firstItem="oZQ-iF-pVb" firstAttribute="top" secondItem="BUL-1I-l0t" secondAttribute="top" id="nLO-pp-9bI"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidthDivider">
+                                                        <real key="value" value="80"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusDivider">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view clipsSubviews="YES" tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CuE-tL-dZj" userLabel="Question 3">
+                                                <rect key="frame" x="170" y="0.0" width="165" height="80.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HRl-lH-hDT">
+                                                        <rect key="frame" x="0.0" y="0.0" width="165" height="80.5"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <inset key="titleEdgeInsets" minX="3" minY="3" maxX="3" maxY="3"/>
+                                                        <state key="normal" title="Question 3">
+                                                            <color key="titleColor" name="ivory"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="buttonPressed:" destination="wfM-ID-6yD" eventType="touchUpInside" id="27U-nQ-iAD"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" name="bluePalette-3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="HRl-lH-hDT" secondAttribute="trailing" id="MlL-Qa-vCQ"/>
+                                                    <constraint firstItem="HRl-lH-hDT" firstAttribute="leading" secondItem="CuE-tL-dZj" secondAttribute="leading" id="PFx-1T-HfS"/>
+                                                    <constraint firstAttribute="bottom" secondItem="HRl-lH-hDT" secondAttribute="bottom" id="dr6-mA-bp1"/>
+                                                    <constraint firstItem="HRl-lH-hDT" firstAttribute="top" secondItem="CuE-tL-dZj" secondAttribute="top" id="lhs-UW-DzN"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidthDivider">
+                                                        <real key="value" value="80"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusDivider">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="efr-DQ-x2V">
+                                        <rect key="frame" x="0.0" y="170.5" width="335" height="80"/>
+                                        <subviews>
+                                            <view clipsSubviews="YES" tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nLH-tG-dlN" userLabel="Question 4">
+                                                <rect key="frame" x="0.0" y="0.0" width="165" height="80"/>
+                                                <subviews>
+                                                    <button opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sqo-ej-8VX">
+                                                        <rect key="frame" x="0.0" y="0.0" width="165" height="80"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <inset key="titleEdgeInsets" minX="3" minY="3" maxX="3" maxY="3"/>
+                                                        <state key="normal" title="Question 4">
+                                                            <color key="titleColor" name="ivory"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="buttonPressed:" destination="wfM-ID-6yD" eventType="touchUpInside" id="aOB-gv-9vG"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" name="bluePalette-3"/>
+                                                <constraints>
+                                                    <constraint firstItem="sqo-ej-8VX" firstAttribute="top" secondItem="nLH-tG-dlN" secondAttribute="top" id="0ca-Mo-Sdc"/>
+                                                    <constraint firstItem="sqo-ej-8VX" firstAttribute="leading" secondItem="nLH-tG-dlN" secondAttribute="leading" id="1Vx-xp-TuX"/>
+                                                    <constraint firstAttribute="trailing" secondItem="sqo-ej-8VX" secondAttribute="trailing" id="7o1-pS-HBE"/>
+                                                    <constraint firstAttribute="bottom" secondItem="sqo-ej-8VX" secondAttribute="bottom" id="g85-AJ-6aQ"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidthDivider">
+                                                        <real key="value" value="80"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusDivider">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view clipsSubviews="YES" tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GDM-sp-KVt" userLabel="Question 5">
+                                                <rect key="frame" x="170" y="0.0" width="165" height="80"/>
+                                                <subviews>
+                                                    <button opaque="NO" clipsSubviews="YES" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bxr-De-SRx">
+                                                        <rect key="frame" x="0.0" y="0.0" width="165" height="80"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <inset key="titleEdgeInsets" minX="3" minY="3" maxX="3" maxY="3"/>
+                                                        <state key="normal" title="Question 5">
+                                                            <color key="titleColor" name="ivory"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="buttonPressed:" destination="wfM-ID-6yD" eventType="touchUpInside" id="ffU-PF-I3y"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" name="bluePalette-3"/>
+                                                <constraints>
+                                                    <constraint firstItem="Bxr-De-SRx" firstAttribute="leading" secondItem="GDM-sp-KVt" secondAttribute="leading" id="2Rc-8B-SFV"/>
+                                                    <constraint firstItem="Bxr-De-SRx" firstAttribute="top" secondItem="GDM-sp-KVt" secondAttribute="top" id="8fX-l7-okb"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Bxr-De-SRx" secondAttribute="bottom" id="MYI-zl-BmH"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Bxr-De-SRx" secondAttribute="trailing" id="mLx-jk-AnN"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidthDivider">
+                                                        <real key="value" value="80"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusDivider">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PvG-a7-58e"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7lZ-oV-oaQ" firstAttribute="leading" secondItem="PvG-a7-58e" secondAttribute="leading" id="2Ie-VN-BQ9"/>
+                            <constraint firstItem="7lZ-oV-oaQ" firstAttribute="top" secondItem="PvG-a7-58e" secondAttribute="top" id="5PQ-bc-Uk7"/>
+                            <constraint firstItem="PvG-a7-58e" firstAttribute="bottom" secondItem="7lZ-oV-oaQ" secondAttribute="bottom" id="EDH-EV-t00"/>
+                            <constraint firstItem="PvG-a7-58e" firstAttribute="trailing" secondItem="7lZ-oV-oaQ" secondAttribute="trailing" id="Nvt-OB-pJf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outletCollection property="questionViews" destination="QoC-Zi-sql" collectionClass="NSMutableArray" id="cbF-VK-1NH"/>
+                        <outletCollection property="questionButtons" destination="Yl1-jB-lWC" collectionClass="NSMutableArray" id="6dm-H5-J2r"/>
+                        <outletCollection property="questionButtons" destination="oZQ-iF-pVb" collectionClass="NSMutableArray" id="UuA-Nl-8MN"/>
+                        <outletCollection property="questionButtons" destination="HRl-lH-hDT" collectionClass="NSMutableArray" id="Ovq-TG-zv9"/>
+                        <outletCollection property="questionButtons" destination="sqo-ej-8VX" collectionClass="NSMutableArray" id="nj6-Hy-Yop"/>
+                        <outletCollection property="questionButtons" destination="Bxr-De-SRx" collectionClass="NSMutableArray" id="Q7V-bJ-lt7"/>
+                        <outletCollection property="questionButtons" destination="EGL-j2-xwP" collectionClass="NSMutableArray" id="ehR-Vc-gbw"/>
+                        <outletCollection property="questionViews" destination="vr3-Jf-yb8" collectionClass="NSMutableArray" id="Gtc-Le-jkM"/>
+                        <outletCollection property="questionViews" destination="BUL-1I-l0t" collectionClass="NSMutableArray" id="hGc-ts-LuU"/>
+                        <outletCollection property="questionViews" destination="CuE-tL-dZj" collectionClass="NSMutableArray" id="Ay2-Xu-fG9"/>
+                        <outletCollection property="questionViews" destination="nLH-tG-dlN" collectionClass="NSMutableArray" id="Ifb-cI-Dbi"/>
+                        <outletCollection property="questionViews" destination="GDM-sp-KVt" collectionClass="NSMutableArray" id="sgH-dX-jWZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zUx-8V-ujO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1837.5999999999999" y="152.47376311844079"/>
+        </scene>
+        <!--Guess View Controller-->
+        <scene sceneID="ibV-6M-hgw">
+            <objects>
+                <viewController id="u85-qF-hqS" userLabel="Guess View Controller" customClass="GuessViewController" customModule="QuickGuess" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="633-nW-G8N">
+                        <rect key="frame" x="0.0" y="0.0" width="335" height="250.5"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="GC7-oy-I5l" userLabel="Card Fields">
+                                <rect key="frame" x="54.5" y="10" width="226" height="42"/>
+                                <subviews>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gRU-By-CEW" userLabel="View 0">
+                                        <rect key="frame" x="0.0" y="0.0" width="42" height="42"/>
+                                        <subviews>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VDj-pi-ub2">
+                                                <rect key="frame" x="1" y="1" width="40" height="40"/>
+                                                <color key="backgroundColor" name="ivory"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="LFq-kl-Zec"/>
+                                                    <constraint firstAttribute="height" constant="40" id="lpo-hc-eFX"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="36"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="0"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="7"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="cardFieldSelected:" destination="u85-qF-hqS" eventType="touchUpInside" id="trm-aO-a7W"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="42" id="2hY-M0-3Yq"/>
+                                            <constraint firstAttribute="height" constant="42" id="QTi-8c-Xns"/>
+                                            <constraint firstItem="VDj-pi-ub2" firstAttribute="centerY" secondItem="gRU-By-CEW" secondAttribute="centerY" id="d9b-w4-Bt6"/>
+                                            <constraint firstItem="VDj-pi-ub2" firstAttribute="centerX" secondItem="gRU-By-CEW" secondAttribute="centerX" id="gdk-vC-WUL"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view clipsSubviews="YES" tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z3a-eA-aXZ" userLabel="View 1">
+                                        <rect key="frame" x="46" y="0.0" width="42" height="42"/>
+                                        <subviews>
+                                            <button opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aBn-4N-JPp">
+                                                <rect key="frame" x="1" y="1" width="40" height="40"/>
+                                                <color key="backgroundColor" name="ivory"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="Rdt-P8-oCB"/>
+                                                    <constraint firstAttribute="width" constant="40" id="zyx-60-xtW"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="36"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="1"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="7"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="cardFieldSelected:" destination="u85-qF-hqS" eventType="touchUpInside" id="0EN-Bj-W0z"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="Ih5-CL-W83"/>
+                                            <constraint firstAttribute="width" constant="42" id="UPm-jM-rjl"/>
+                                            <constraint firstItem="aBn-4N-JPp" firstAttribute="centerX" secondItem="Z3a-eA-aXZ" secondAttribute="centerX" id="YVT-tI-Ea9"/>
+                                            <constraint firstItem="aBn-4N-JPp" firstAttribute="centerY" secondItem="Z3a-eA-aXZ" secondAttribute="centerY" id="eUr-c4-xbU"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view clipsSubviews="YES" tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qaW-af-Jbp" userLabel="View 2">
+                                        <rect key="frame" x="92" y="0.0" width="42" height="42"/>
+                                        <subviews>
+                                            <button opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="csg-ef-cHs">
+                                                <rect key="frame" x="1" y="1" width="40" height="40"/>
+                                                <color key="backgroundColor" name="ivory"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="5lp-lr-bCY"/>
+                                                    <constraint firstAttribute="height" constant="40" id="G6Z-xg-1tx"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="36"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="2"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="7"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="cardFieldSelected:" destination="u85-qF-hqS" eventType="touchUpInside" id="hwA-oT-Q3H"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="42" id="JGy-lM-yTy"/>
+                                            <constraint firstAttribute="height" constant="42" id="Qg4-bk-2nw"/>
+                                            <constraint firstItem="csg-ef-cHs" firstAttribute="centerY" secondItem="qaW-af-Jbp" secondAttribute="centerY" id="QmA-2I-Nfz"/>
+                                            <constraint firstItem="csg-ef-cHs" firstAttribute="centerX" secondItem="qaW-af-Jbp" secondAttribute="centerX" id="qKm-cR-gHR"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view clipsSubviews="YES" tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="haf-Ku-qxB" userLabel="View 3">
+                                        <rect key="frame" x="138" y="0.0" width="42" height="42"/>
+                                        <subviews>
+                                            <button opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EaG-xz-e2K">
+                                                <rect key="frame" x="1" y="1" width="40" height="40"/>
+                                                <color key="backgroundColor" name="ivory"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="Lha-2h-wLG"/>
+                                                    <constraint firstAttribute="width" constant="40" id="y0N-Om-UKG"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="36"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="3"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="7"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="cardFieldSelected:" destination="u85-qF-hqS" eventType="touchUpInside" id="DYZ-fu-Xou"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="EaG-xz-e2K" firstAttribute="centerX" secondItem="haf-Ku-qxB" secondAttribute="centerX" id="3y6-1p-Fxl"/>
+                                            <constraint firstAttribute="height" constant="42" id="Y56-Ad-Y0f"/>
+                                            <constraint firstAttribute="width" constant="42" id="eVJ-rN-9iG"/>
+                                            <constraint firstItem="EaG-xz-e2K" firstAttribute="centerY" secondItem="haf-Ku-qxB" secondAttribute="centerY" id="mEF-ve-eD6"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view clipsSubviews="YES" tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5qF-Tu-Pxr" userLabel="View 4">
+                                        <rect key="frame" x="184" y="0.0" width="42" height="42"/>
+                                        <subviews>
+                                            <button opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2pR-xj-twT">
+                                                <rect key="frame" x="1" y="1" width="40" height="40"/>
+                                                <color key="backgroundColor" name="ivory"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="3Wc-q1-4U1"/>
+                                                    <constraint firstAttribute="height" constant="40" id="zCd-vL-7fT"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="36"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="4"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="7"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="cardFieldSelected:" destination="u85-qF-hqS" eventType="touchUpInside" id="mi8-KN-g2g"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="2pR-xj-twT" firstAttribute="centerX" secondItem="5qF-Tu-Pxr" secondAttribute="centerX" id="6pr-fP-jsi"/>
+                                            <constraint firstAttribute="height" constant="42" id="E6k-p5-Vjo"/>
+                                            <constraint firstAttribute="width" constant="42" id="EPP-dd-NVO"/>
+                                            <constraint firstItem="2pR-xj-twT" firstAttribute="centerY" secondItem="5qF-Tu-Pxr" secondAttribute="centerY" id="GEU-Im-5rX"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="BEA-2p-sp9"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X9J-Mw-NQf" userLabel="Cards">
+                                <rect key="frame" x="17.5" y="72" width="300" height="55"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="PAs-l2-JdC">
+                                        <rect key="frame" x="5" y="5" width="290" height="45"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wiH-Su-UR0">
+                                                <rect key="frame" x="0.0" y="0.0" width="290" height="20"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q9X-w9-Xbj">
+                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="20" id="VaY-BF-GBh"/>
+                                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="20" id="yQW-WW-lo1"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                        <state key="normal" title="0">
+                                                            <color key="titleColor" name="redCard"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="cardSelected:" destination="u85-qF-hqS" eventType="touchUpInside" id="fnN-s1-3Yf"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="viu-AY-rqb">
+                                                        <rect key="frame" x="30" y="0.0" width="20" height="20"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                        <state key="normal" title="1">
+                                                            <color key="titleColor" name="redCard"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="cardSelected:" destination="u85-qF-hqS" eventType="touchUpInside" id="2wH-20-amQ"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hWb-vR-6Su">
+                                                        <rect key="frame" x="60" y="0.0" width="20" height="20"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                        <state key="normal" title="2">
+                                                            <color key="titleColor" name="redCard"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="cardSelected:" destination="u85-qF-hqS" eventType="touchUpInside" id="Zmw-v0-e3S"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Onl-1o-C0x">
+                                                        <rect key="frame" x="90" y="0.0" width="20" height="20"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                        <state key="normal" title="3">
+                                                            <color key="titleColor" name="redCard"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="cardSelected:" destination="u85-qF-hqS" eventType="touchUpInside" id="nT3-bW-LVQ"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kiN-PN-er7">
+                                                        <rect key="frame" x="120" y="0.0" width="20" height="20"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                        <state key="normal" title="4">
+                                                            <color key="titleColor" name="redCard"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="cardSelected:" destination="u85-qF-hqS" eventType="touchUpInside" id="SUk-kV-TWE"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h6E-d3-wQ1">
+                                                        <rect key="frame" x="150" y="0.0" width="20" height="20"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                        <state key="normal" title="5">
+                                                            <color key="titleColor" name="greenCard"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="cardSelected:" destination="u85-qF-hqS" eventType="touchUpInside" id="qgM-02-W7i"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kz0-z7-3JC">
+                                                        <rect key="frame" x="180" y="0.0" width="20" height="20"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                        <state key="normal" title="6">
+                                                            <color key="titleColor" name="redCard"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="cardSelected:" destination="u85-qF-hqS" eventType="touchUpInside" id="sTW-de-GXH"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZL5-9S-I36">
+                                                        <rect key="frame" x="210" y="0.0" width="20" height="20"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                        <state key="normal" title="7">
+                                                            <color key="titleColor" name="redCard"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="cardSelected:" destination="u85-qF-hqS" eventType="touchUpInside" id="5ce-pS-08e"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yYK-eF-JM2">
+                                                        <rect key="frame" x="240" y="0.0" width="20" height="20"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                        <state key="normal" title="8">
+                                                            <color key="titleColor" name="redCard"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="cardSelected:" destination="u85-qF-hqS" eventType="touchUpInside" id="F9Z-bw-7KF"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rj1-pf-6WL">
+                                                        <rect key="frame" x="270" y="0.0" width="20" height="20"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                        <state key="normal" title="9">
+                                                            <color key="titleColor" name="redCard"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="cardSelected:" destination="u85-qF-hqS" eventType="touchUpInside" id="dPC-oF-FYC"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3gX-uv-toM">
+                                                <rect key="frame" x="0.0" y="25" width="290" height="20"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v16-jE-s1X">
+                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="20" id="YV6-0R-NdG"/>
+                                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="20" id="a36-El-obV"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                        <state key="normal" title="0">
+                                                            <color key="titleColor" name="blueCard"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="cardSelected:" destination="u85-qF-hqS" eventType="touchUpInside" id="8qc-Eu-21A"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ZB-zF-TOO">
+                                                        <rect key="frame" x="30" y="0.0" width="20" height="20"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                        <state key="normal" title="1">
+                                                            <color key="titleColor" name="blueCard"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="cardSelected:" destination="u85-qF-hqS" eventType="touchUpInside" id="Pcn-Qx-hv6"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znO-p9-t4c">
+                                                        <rect key="frame" x="60" y="0.0" width="20" height="20"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                        <state key="normal" title="2">
+                                                            <color key="titleColor" name="blueCard"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="cardSelected:" destination="u85-qF-hqS" eventType="touchUpInside" id="olP-XK-wEv"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gzh-Nb-GXp">
+                                                        <rect key="frame" x="90" y="0.0" width="20" height="20"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                        <state key="normal" title="3">
+                                                            <color key="titleColor" name="blueCard"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="cardSelected:" destination="u85-qF-hqS" eventType="touchUpInside" id="8Nr-es-WDf"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKN-cq-R9N">
+                                                        <rect key="frame" x="120" y="0.0" width="20" height="20"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                        <state key="normal" title="4">
+                                                            <color key="titleColor" name="blueCard"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="cardSelected:" destination="u85-qF-hqS" eventType="touchUpInside" id="kpb-Ak-MQ6"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lYO-PH-boE">
+                                                        <rect key="frame" x="150" y="0.0" width="20" height="20"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                        <state key="normal" title="5">
+                                                            <color key="titleColor" name="greenCard"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="cardSelected:" destination="u85-qF-hqS" eventType="touchUpInside" id="ksv-62-eKb"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DQs-zv-pYV">
+                                                        <rect key="frame" x="180" y="0.0" width="20" height="20"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                        <state key="normal" title="6">
+                                                            <color key="titleColor" name="blueCard"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="cardSelected:" destination="u85-qF-hqS" eventType="touchUpInside" id="v8E-42-nw6"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tx0-ky-egS">
+                                                        <rect key="frame" x="210" y="0.0" width="20" height="20"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                        <state key="normal" title="7">
+                                                            <color key="titleColor" name="blueCard"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="cardSelected:" destination="u85-qF-hqS" eventType="touchUpInside" id="T7T-GQ-nsR"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Sd-N2-q5A">
+                                                        <rect key="frame" x="240" y="0.0" width="20" height="20"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                        <state key="normal" title="8">
+                                                            <color key="titleColor" name="blueCard"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="cardSelected:" destination="u85-qF-hqS" eventType="touchUpInside" id="Hgm-TE-5kv"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="19" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l0K-6f-SDK">
+                                                        <rect key="frame" x="270" y="0.0" width="20" height="20"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                        <state key="normal" title="9">
+                                                            <color key="titleColor" name="blueCard"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="cardSelected:" destination="u85-qF-hqS" eventType="touchUpInside" id="sEX-il-atC"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" name="ivory"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="5k8-K2-k4s"/>
+                                    <constraint firstItem="PAs-l2-JdC" firstAttribute="top" secondItem="X9J-Mw-NQf" secondAttribute="top" constant="5" id="KOs-D0-HV0"/>
+                                    <constraint firstItem="PAs-l2-JdC" firstAttribute="leading" secondItem="X9J-Mw-NQf" secondAttribute="leading" constant="5" id="Miu-x1-xFi"/>
+                                    <constraint firstAttribute="trailing" secondItem="PAs-l2-JdC" secondAttribute="trailing" constant="5" id="St1-Mc-63a"/>
+                                    <constraint firstAttribute="bottom" secondItem="PAs-l2-JdC" secondAttribute="bottom" constant="5" id="ojr-eQ-XkU"/>
+                                    <constraint firstAttribute="height" constant="55" id="rNi-oe-DQO"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="4N4-3s-ZIx" userLabel="Buttons">
+                                <rect key="frame" x="87.5" y="147" width="160" height="35"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hzh-Pb-BSY">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="35"/>
+                                        <color key="backgroundColor" name="bluePalette-3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="Oa8-4V-kmx"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="重設">
+                                            <color key="titleColor" name="ivory"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="resetPressed:" destination="u85-qF-hqS" eventType="touchUpInside" id="C3a-Np-H3i"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14t-AZ-1dq">
+                                        <rect key="frame" x="100" y="0.0" width="60" height="35"/>
+                                        <color key="backgroundColor" name="bluePalette-3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="猜測">
+                                            <color key="titleColor" name="ivory"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="guessPressed:" destination="u85-qF-hqS" eventType="touchUpInside" id="bQY-HY-PFk"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="bAn-zl-3q2"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Er0-Wz-lqn"/>
+                        <constraints>
+                            <constraint firstItem="GC7-oy-I5l" firstAttribute="top" secondItem="Er0-Wz-lqn" secondAttribute="top" constant="10" id="6dI-ch-7Po"/>
+                            <constraint firstItem="X9J-Mw-NQf" firstAttribute="centerX" secondItem="633-nW-G8N" secondAttribute="centerX" id="8Ph-Px-AVk"/>
+                            <constraint firstItem="GC7-oy-I5l" firstAttribute="centerX" secondItem="633-nW-G8N" secondAttribute="centerX" id="QBP-Aq-XAT"/>
+                            <constraint firstItem="4N4-3s-ZIx" firstAttribute="top" secondItem="X9J-Mw-NQf" secondAttribute="bottom" constant="20" id="beG-hI-QLL"/>
+                            <constraint firstItem="X9J-Mw-NQf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Er0-Wz-lqn" secondAttribute="leading" id="k48-at-b2N"/>
+                            <constraint firstItem="4N4-3s-ZIx" firstAttribute="centerX" secondItem="633-nW-G8N" secondAttribute="centerX" id="nV2-hn-Q0f"/>
+                            <constraint firstItem="Er0-Wz-lqn" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="X9J-Mw-NQf" secondAttribute="trailing" id="oui-ce-BRI"/>
+                            <constraint firstItem="X9J-Mw-NQf" firstAttribute="top" secondItem="GC7-oy-I5l" secondAttribute="bottom" constant="20" id="uHl-RD-OEZ"/>
+                            <constraint firstItem="Er0-Wz-lqn" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="4N4-3s-ZIx" secondAttribute="bottom" id="zSe-9N-fjt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outletCollection property="cardFields" destination="aBn-4N-JPp" collectionClass="NSMutableArray" id="oi0-HN-aVJ"/>
+                        <outletCollection property="cardFields" destination="2pR-xj-twT" collectionClass="NSMutableArray" id="cpF-1Z-rcj"/>
+                        <outletCollection property="cardFields" destination="csg-ef-cHs" collectionClass="NSMutableArray" id="wJd-jr-kmM"/>
+                        <outletCollection property="cardFieldViews" destination="Z3a-eA-aXZ" collectionClass="NSMutableArray" id="hLh-CL-soo"/>
+                        <outletCollection property="cardFieldViews" destination="gRU-By-CEW" collectionClass="NSMutableArray" id="4hS-u3-AL8"/>
+                        <outletCollection property="cardFields" destination="EaG-xz-e2K" collectionClass="NSMutableArray" id="0rU-rn-B3d"/>
+                        <outletCollection property="cardFields" destination="VDj-pi-ub2" collectionClass="NSMutableArray" id="bBk-Wf-tcY"/>
+                        <outletCollection property="cardFieldViews" destination="5qF-Tu-Pxr" collectionClass="NSMutableArray" id="79M-jF-CnA"/>
+                        <outletCollection property="cardFieldViews" destination="haf-Ku-qxB" collectionClass="NSMutableArray" id="gMm-2N-unP"/>
+                        <outletCollection property="cardFieldViews" destination="qaW-af-Jbp" collectionClass="NSMutableArray" id="oLd-eI-0Vy"/>
+                        <outletCollection property="cards" destination="ZL5-9S-I36" collectionClass="NSMutableArray" id="k00-Zw-vTg"/>
+                        <outletCollection property="cards" destination="Onl-1o-C0x" collectionClass="NSMutableArray" id="5iT-vb-p2v"/>
+                        <outletCollection property="cards" destination="yYK-eF-JM2" collectionClass="NSMutableArray" id="hGF-fL-fjB"/>
+                        <outletCollection property="cards" destination="h6E-d3-wQ1" collectionClass="NSMutableArray" id="l9k-BQ-Esz"/>
+                        <outletCollection property="cards" destination="hWb-vR-6Su" collectionClass="NSMutableArray" id="NfJ-Sg-zX1"/>
+                        <outletCollection property="cards" destination="Q9X-w9-Xbj" collectionClass="NSMutableArray" id="HBt-pg-H1g"/>
+                        <outletCollection property="cards" destination="znO-p9-t4c" collectionClass="NSMutableArray" id="rzj-TR-NZu"/>
+                        <outletCollection property="cards" destination="DQs-zv-pYV" collectionClass="NSMutableArray" id="gbq-SI-rt6"/>
+                        <outletCollection property="cards" destination="viu-AY-rqb" collectionClass="NSMutableArray" id="cJ5-SN-856"/>
+                        <outletCollection property="cards" destination="kz0-z7-3JC" collectionClass="NSMutableArray" id="xhr-ex-vva"/>
+                        <outletCollection property="cards" destination="bKN-cq-R9N" collectionClass="NSMutableArray" id="7XT-0G-GxQ"/>
+                        <outletCollection property="cards" destination="lYO-PH-boE" collectionClass="NSMutableArray" id="mfl-7G-Oxf"/>
+                        <outletCollection property="cards" destination="gzh-Nb-GXp" collectionClass="NSMutableArray" id="cy5-1i-Qj6"/>
+                        <outletCollection property="cards" destination="v16-jE-s1X" collectionClass="NSMutableArray" id="z6O-ow-Rgu"/>
+                        <outletCollection property="cards" destination="3Sd-N2-q5A" collectionClass="NSMutableArray" id="AeM-Hu-t9L"/>
+                        <outletCollection property="cards" destination="l0K-6f-SDK" collectionClass="NSMutableArray" id="TMC-bV-T3U"/>
+                        <outletCollection property="cards" destination="6ZB-zF-TOO" collectionClass="NSMutableArray" id="SDk-bZ-nZN"/>
+                        <outletCollection property="cards" destination="rj1-pf-6WL" collectionClass="NSMutableArray" id="Zlu-1D-dGA"/>
+                        <outletCollection property="cards" destination="tx0-ky-egS" collectionClass="NSMutableArray" id="RCx-KP-g0D"/>
+                        <outletCollection property="cards" destination="kiN-PN-er7" collectionClass="NSMutableArray" id="tgK-8l-hWR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qge-KR-OsL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1837.5999999999999" y="-330.58470764617692"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrowshape.turn.up.backward" catalog="system" width="128" height="106"/>
+        <image name="info.circle" catalog="system" width="128" height="121"/>
+        <image name="xmark.circle" catalog="system" width="128" height="121"/>
+        <namedColor name="blueCard">
+            <color red="0.18199999630451202" green="0.37400001287460327" blue="0.58700001239776611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="bluePalette-0">
+            <color red="0.13699999451637268" green="0.19200000166893005" blue="0.25900000333786011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="bluePalette-1">
+            <color red="0.059000000357627869" green="0.18799999356269836" blue="0.34099999070167542" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="bluePalette-2">
+            <color red="0.0" green="0.3449999988079071" blue="0.4779999852180481" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="bluePalette-3">
+            <color red="0.0" green="0.53299999237060547" blue="0.5690000057220459" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="greenCard">
+            <color red="0.11800000071525574" green="0.58799999952316284" blue="0.43900001049041748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ivory">
+            <color red="0.90600001811981201" green="0.90600001811981201" blue="0.87099999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="redCard">
+            <color red="0.89399999380111694" green="0.25099998712539673" blue="0.25900000333786011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="yellow">
+            <color red="0.98000001907348633" green="0.81199997663497925" blue="0.3529999852180481" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,0 +1,524 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		50D0A3DDDE73FD682D45D1FA /* Pods_QuickGuess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9174A3A3C425FF0E51DC10D /* Pods_QuickGuess.framework */; };
+		B5192785256D0BD000AD867F /* GuessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5192784256D0BD000AD867F /* GuessViewController.swift */; };
+		B5192788256D0C0B00AD867F /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5192787256D0C0B00AD867F /* NoteViewController.swift */; };
+		B51CA119256B80C5006B6B40 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51CA117256B80C5006B6B40 /* MessageTableViewCell.swift */; };
+		B51CA11A256B80C5006B6B40 /* MessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B51CA118256B80C5006B6B40 /* MessageTableViewCell.xib */; };
+		B54F414C257247E300C8301D /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54F414B257247E300C8301D /* InfoViewController.swift */; };
+		B557AEB52567C0E400CAB0F3 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = B557AEB42567C0E400CAB0F3 /* Question.swift */; };
+		B557AEB92567DF8D00CAB0F3 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B557AEB82567DF8D00CAB0F3 /* GameViewController.swift */; };
+		B5667FCF256671EA00F3B781 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5667FCE256671EA00F3B781 /* Player.swift */; };
+		B5667FD22566734B00F3B781 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5667FD12566734B00F3B781 /* Card.swift */; };
+		B5667FD6256676FC00F3B781 /* CardSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5667FD5256676FC00F3B781 /* CardSet.swift */; };
+		B5667FDA2566B15600F3B781 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5667FD92566B15600F3B781 /* Constants.swift */; };
+		B5BC271B256604EC00BB5D1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BC271A256604EC00BB5D1F /* AppDelegate.swift */; };
+		B5BC271D256604EC00BB5D1F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BC271C256604EC00BB5D1F /* SceneDelegate.swift */; };
+		B5BC271F256604EC00BB5D1F /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BC271E256604EC00BB5D1F /* StartViewController.swift */; };
+		B5BC2722256604EC00BB5D1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5BC2720256604EC00BB5D1F /* Main.storyboard */; };
+		B5BC2724256604EC00BB5D1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5BC2723256604EC00BB5D1F /* Assets.xcassets */; };
+		B5BC2727256604EC00BB5D1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5BC2725256604EC00BB5D1F /* LaunchScreen.storyboard */; };
+		B5D437912567F309005C9B91 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D437902567F309005C9B91 /* Helper.swift */; };
+		B5D4379425680F9E005C9B91 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D4379325680F9E005C9B91 /* Extensions.swift */; };
+		B5D437972569006F005C9B91 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D437962569006F005C9B91 /* Message.swift */; };
+		B5D4379E256A498B005C9B91 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D4379D256A498B005C9B91 /* QuestionViewController.swift */; };
+		B5DF5A462566C7350000D59E /* Computer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DF5A452566C7350000D59E /* Computer.swift */; };
+		B5DF5A492566D1100000D59E /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DF5A482566D1100000D59E /* GameManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		082C0F2626AAAB186D7254AB /* Pods-QuickGuess.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickGuess.release.xcconfig"; path = "Target Support Files/Pods-QuickGuess/Pods-QuickGuess.release.xcconfig"; sourceTree = "<group>"; };
+		A76A9734FDFE8B68D4E73D1F /* Pods-QuickGuess.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickGuess.debug.xcconfig"; path = "Target Support Files/Pods-QuickGuess/Pods-QuickGuess.debug.xcconfig"; sourceTree = "<group>"; };
+		A9174A3A3C425FF0E51DC10D /* Pods_QuickGuess.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuickGuess.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5192784256D0BD000AD867F /* GuessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessViewController.swift; sourceTree = "<group>"; };
+		B5192787256D0C0B00AD867F /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
+		B51CA117256B80C5006B6B40 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
+		B51CA118256B80C5006B6B40 /* MessageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageTableViewCell.xib; sourceTree = "<group>"; };
+		B54F414B257247E300C8301D /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		B557AEB42567C0E400CAB0F3 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		B557AEB82567DF8D00CAB0F3 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		B5667FCE256671EA00F3B781 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		B5667FD12566734B00F3B781 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		B5667FD5256676FC00F3B781 /* CardSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSet.swift; sourceTree = "<group>"; };
+		B5667FD92566B15600F3B781 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B5BC2717256604EC00BB5D1F /* QuickGuess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickGuess.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5BC271A256604EC00BB5D1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B5BC271C256604EC00BB5D1F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B5BC271E256604EC00BB5D1F /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		B5BC2721256604EC00BB5D1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B5BC2723256604EC00BB5D1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B5BC2726256604EC00BB5D1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B5BC2728256604EC00BB5D1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5D437902567F309005C9B91 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		B5D4379325680F9E005C9B91 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		B5D437962569006F005C9B91 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		B5D4379D256A498B005C9B91 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		B5DF5A452566C7350000D59E /* Computer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Computer.swift; sourceTree = "<group>"; };
+		B5DF5A482566D1100000D59E /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B5BC2714256604EC00BB5D1F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50D0A3DDDE73FD682D45D1FA /* Pods_QuickGuess.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3BEE8CE69D6462C841EF0305 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A9174A3A3C425FF0E51DC10D /* Pods_QuickGuess.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9992251CDC05B8C2E998444E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A76A9734FDFE8B68D4E73D1F /* Pods-QuickGuess.debug.xcconfig */,
+				082C0F2626AAAB186D7254AB /* Pods-QuickGuess.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B5667FD82566B14700F3B781 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B5667FD92566B15600F3B781 /* Constants.swift */,
+				B5D437902567F309005C9B91 /* Helper.swift */,
+				B5D4379325680F9E005C9B91 /* Extensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		B5BC270E256604EC00BB5D1F = {
+			isa = PBXGroup;
+			children = (
+				B5BC2719256604EC00BB5D1F /* QuickGuess */,
+				B5BC2718256604EC00BB5D1F /* Products */,
+				9992251CDC05B8C2E998444E /* Pods */,
+				3BEE8CE69D6462C841EF0305 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B5BC2718256604EC00BB5D1F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B5BC2717256604EC00BB5D1F /* QuickGuess.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B5BC2719256604EC00BB5D1F /* QuickGuess */ = {
+			isa = PBXGroup;
+			children = (
+				B5BC2735256634F100BB5D1F /* Models */,
+				B5BC2733256633CE00BB5D1F /* Views */,
+				B5BC27322566307800BB5D1F /* Controllers */,
+				B5BC27362566356F00BB5D1F /* Storyboards */,
+				B5667FD82566B14700F3B781 /* Helpers */,
+				B5BC271A256604EC00BB5D1F /* AppDelegate.swift */,
+				B5BC271C256604EC00BB5D1F /* SceneDelegate.swift */,
+				B5BC2723256604EC00BB5D1F /* Assets.xcassets */,
+				B5BC2728256604EC00BB5D1F /* Info.plist */,
+			);
+			path = QuickGuess;
+			sourceTree = "<group>";
+		};
+		B5BC27322566307800BB5D1F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B5BC271E256604EC00BB5D1F /* StartViewController.swift */,
+				B557AEB82567DF8D00CAB0F3 /* GameViewController.swift */,
+				B5D4379D256A498B005C9B91 /* QuestionViewController.swift */,
+				B5192784256D0BD000AD867F /* GuessViewController.swift */,
+				B5192787256D0C0B00AD867F /* NoteViewController.swift */,
+				B54F414B257247E300C8301D /* InfoViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B5BC2733256633CE00BB5D1F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B51CA117256B80C5006B6B40 /* MessageTableViewCell.swift */,
+				B51CA118256B80C5006B6B40 /* MessageTableViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B5BC2735256634F100BB5D1F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B5667FD12566734B00F3B781 /* Card.swift */,
+				B5667FD5256676FC00F3B781 /* CardSet.swift */,
+				B5DF5A482566D1100000D59E /* GameManager.swift */,
+				B5667FCE256671EA00F3B781 /* Player.swift */,
+				B5DF5A452566C7350000D59E /* Computer.swift */,
+				B557AEB42567C0E400CAB0F3 /* Question.swift */,
+				B5D437962569006F005C9B91 /* Message.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B5BC27362566356F00BB5D1F /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B5BC2720256604EC00BB5D1F /* Main.storyboard */,
+				B5BC2725256604EC00BB5D1F /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B5BC2716256604EC00BB5D1F /* QuickGuess */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5BC272B256604EC00BB5D1F /* Build configuration list for PBXNativeTarget "QuickGuess" */;
+			buildPhases = (
+				09450054FE2AF3E9FDD21F92 /* [CP] Check Pods Manifest.lock */,
+				B5BC2713256604EC00BB5D1F /* Sources */,
+				B5BC2714256604EC00BB5D1F /* Frameworks */,
+				B5BC2715256604EC00BB5D1F /* Resources */,
+				0C65D10133D37381B3C0406A /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QuickGuess;
+			productName = QuickGuess;
+			productReference = B5BC2717256604EC00BB5D1F /* QuickGuess.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B5BC270F256604EC00BB5D1F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					B5BC2716256604EC00BB5D1F = {
+						CreatedOnToolsVersion = 12.2;
+					};
+				};
+			};
+			buildConfigurationList = B5BC2712256604EC00BB5D1F /* Build configuration list for PBXProject "QuickGuess" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B5BC270E256604EC00BB5D1F;
+			productRefGroup = B5BC2718256604EC00BB5D1F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B5BC2716256604EC00BB5D1F /* QuickGuess */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B5BC2715256604EC00BB5D1F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5BC2727256604EC00BB5D1F /* LaunchScreen.storyboard in Resources */,
+				B51CA11A256B80C5006B6B40 /* MessageTableViewCell.xib in Resources */,
+				B5BC2724256604EC00BB5D1F /* Assets.xcassets in Resources */,
+				B5BC2722256604EC00BB5D1F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		09450054FE2AF3E9FDD21F92 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QuickGuess-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0C65D10133D37381B3C0406A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QuickGuess/Pods-QuickGuess-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QuickGuess/Pods-QuickGuess-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QuickGuess/Pods-QuickGuess-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B5BC2713256604EC00BB5D1F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5DF5A462566C7350000D59E /* Computer.swift in Sources */,
+				B5DF5A492566D1100000D59E /* GameManager.swift in Sources */,
+				B5667FCF256671EA00F3B781 /* Player.swift in Sources */,
+				B5BC271F256604EC00BB5D1F /* StartViewController.swift in Sources */,
+				B5192788256D0C0B00AD867F /* NoteViewController.swift in Sources */,
+				B5667FD22566734B00F3B781 /* Card.swift in Sources */,
+				B5192785256D0BD000AD867F /* GuessViewController.swift in Sources */,
+				B557AEB52567C0E400CAB0F3 /* Question.swift in Sources */,
+				B5BC271B256604EC00BB5D1F /* AppDelegate.swift in Sources */,
+				B5667FDA2566B15600F3B781 /* Constants.swift in Sources */,
+				B5D4379425680F9E005C9B91 /* Extensions.swift in Sources */,
+				B5667FD6256676FC00F3B781 /* CardSet.swift in Sources */,
+				B557AEB92567DF8D00CAB0F3 /* GameViewController.swift in Sources */,
+				B5D4379E256A498B005C9B91 /* QuestionViewController.swift in Sources */,
+				B5BC271D256604EC00BB5D1F /* SceneDelegate.swift in Sources */,
+				B51CA119256B80C5006B6B40 /* MessageTableViewCell.swift in Sources */,
+				B5D437912567F309005C9B91 /* Helper.swift in Sources */,
+				B5D437972569006F005C9B91 /* Message.swift in Sources */,
+				B54F414C257247E300C8301D /* InfoViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B5BC2720256604EC00BB5D1F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5BC2721256604EC00BB5D1F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B5BC2725256604EC00BB5D1F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5BC2726256604EC00BB5D1F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B5BC2729256604EC00BB5D1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B5BC272A256604EC00BB5D1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B5BC272C256604EC00BB5D1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A76A9734FDFE8B68D4E73D1F /* Pods-QuickGuess.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AYCU2LYX74;
+				INFOPLIST_FILE = QuickGuess/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yhchen.QuickGuess;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B5BC272D256604EC00BB5D1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 082C0F2626AAAB186D7254AB /* Pods-QuickGuess.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AYCU2LYX74;
+				INFOPLIST_FILE = QuickGuess/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yhchen.QuickGuess;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B5BC2712256604EC00BB5D1F /* Build configuration list for PBXProject "QuickGuess" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5BC2729256604EC00BB5D1F /* Debug */,
+				B5BC272A256604EC00BB5D1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5BC272B256604EC00BB5D1F /* Build configuration list for PBXNativeTarget "QuickGuess" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5BC272C256604EC00BB5D1F /* Debug */,
+				B5BC272D256604EC00BB5D1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B5BC270F256604EC00BB5D1F /* Project object */;
+}
