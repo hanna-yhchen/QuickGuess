@@ -418,29 +418,21 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" indicatorStyle="white" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e1E-dd-pi9">
                                 <rect key="frame" x="20" y="45" width="335" height="582"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="➤  ">
+                                    <fragment content="➤">
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" metaFont="system" size="18"/>
-                                            <font key="NSOriginalFont" size="14" name="PingFangTC-Regular"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.2" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="數戰速決">
-                                        <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="18" name=".PingFangTC-Regular"/>
-                                            <font key="NSOriginalFont" size="14" name="PingFangTC-Regular"/>
+                                            <font key="NSFont" size="18" name="ZapfDingbatsITC"/>
+                                            <font key="NSOriginalFont" size="18" name="PingFangTC-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.2" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content" base64-UTF8="YES">
-Cg
+                                        <string key="content">  數戰速決
 </string>
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="14" name="PingFangTC-Regular"/>
+                                            <font key="NSFont" size="18" name="PingFangTC-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="PingFangTC-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.2" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                         </attributes>
                                     </fragment>
@@ -477,7 +469,7 @@ Cg
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <font key="NSFont" size="18" name="ZapfDingbatsITC"/>
-                                            <font key="NSOriginalFont" size="18" name="ZapfDingbatsITC"/>
+                                            <font key="NSOriginalFont" size="18" name="PingFangTC-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.2" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                         </attributes>
                                     </fragment>
@@ -569,6 +561,7 @@ Cgo
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <font key="NSFont" size="18" name="ZapfDingbatsITC"/>
+                                            <font key="NSOriginalFont" size="18" name="PingFangTC-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.2" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                         </attributes>
                                     </fragment>
@@ -576,6 +569,7 @@ Cgo
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <font key="NSFont" size="18" name="PingFangTC-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="PingFangTC-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.2" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                         </attributes>
                                     </fragment>
@@ -624,6 +618,9 @@ Cg
                             <constraint firstItem="e1E-dd-pi9" firstAttribute="top" secondItem="d8W-Sm-QCa" secondAttribute="bottom" constant="5" id="n6L-Nf-SVt"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textView" destination="e1E-dd-pi9" id="jNd-kX-qSW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xTo-6B-zvo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

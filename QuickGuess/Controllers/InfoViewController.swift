@@ -8,15 +8,17 @@
 import UIKit
 
 class InfoViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
+  @IBOutlet var textView: UITextView! {
+    didSet {
+      textView.textColor = UIColor.normalText
     }
-    
-
-  @IBAction func dismissPressed(_ sender: UIButton) {
-    self.dismiss(animated: true, completion: nil)
   }
-  
+
+  override func viewDidLoad() {
+    super.viewDidLoad()
+  }
+
+  @IBAction func dismissPressed(_: UIButton) {
+    dismiss(animated: true, completion: nil)
+  }
 }
